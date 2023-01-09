@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        /* background-color:white; */
+        width: 100vw;
+    }
+
+    .portadas{
+        /* background-color: blue; */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* align-items: center; */
+        flex-wrap: wrap;
+
+        width: 100%;
+        /* height: 700px; */
+        
+        font-family: monospace;
+        font-size: 16px;
+    }
+
+    .portadas_item{
+        display: block;
+        width: 300px;
+        height: auto;
+
+        margin: 25px 20px 25px 20px;
+        /* background-color: #ffffff; */
+        /* border-radius: 10%; */
+        /* box-shadow: 0 25px 50px rgba(0,0,0,0.15); */
+    }
+
+    .container-portadas{
+        width: 300px;
+        height: 450px;
+
+        /* margin: 25px 10px 25px 10px; */
+        background-color: #ffffff;
+        border-radius: 10%;
+        /* border: 1px #000000 solid; */
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+
+
+    .portadas_item_estado{
+
+        z-index: 10010;
+        display: block;
+        position: relative;
+        top: 45px;
+
+        width: 219px;
+        height: 78px;
+
+        margin: 0 auto;
+        /* background-color:blueviolet; */
+    }
+
+    .estado{
+        
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        
+        background-color: red;
+        
+        width: 219px;
+        height: 49px;
+        border-radius: 10px;
+        font-size: 24px;
+        color: #ffffff;
+
+    }
+
+    .estado span{
+        
+        display: block;
+
+    }
+
+    .seccion{
+        
+        text-align: center;
+
+    }
+
+    .seccion span{
+
+        position: relative;
+        top:8px;
+        padding: 8px 14px 8px 14px;
+        background-color: #D9D9D9;
+        border-radius: 0 0 10px 10px;
+
+    }
+
+    .portadas_item_medio{
+        
+        z-index: 10000;
+        /* position: relative; */
+        /* top: -78px; */
+
+    }
+    
+    .imagen-portada{
+        
+        width: 100%;
+        height: 300px;
+        background-image: url("./em.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10% 10% 0 0;
+
+    }
+
+    .titulo{
+
+        display: relative;
+        position: relative;
+        
+        
+        top: -30px;
+        left: -15px;
+        
+        width: 200px;
+        height: 52px;
+        
+        color: #ffffff;
+        background-color: red;
+
+        /* border-radius: 10px 10px 10px 0px; */
+    }
+
+    .titulo::before{
+        z-index:15000;
+        content: ' ';
+        position: absolute;
+        top:52px;
+        width: 15px;
+        height: 15px;
+        border-radius: 0 0 0 10px;
+        background-color: #9f2323;
+        
+    }
+
+    .titulo span{
+        
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 10px 0 10px;
+        margin: 0 auto;
+        font-size: 24px;
+
+    }
+
+    .portadas_item_informacion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .nivel, .conferencia, .duracion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        /* background-color: #9f2323; */
+    }
+
+    .icono_nivel{
+        background-image: url('./level_icon.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        margin: 0 0 10px 0;
+    }
+    .icono_conferencias{
+        background-image: url('./video_icon.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        margin: 0 0 10px 0;
+    }
+    .icono_horas{
+        background-image: url('./clock_icon.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        margin: 0 0 10px 0;
+    }
+    
+    </style>
+</head>
+<body>
+    <h3>Nuestros Cursos</h3>
+    <div class="portadas">
+        <div class="portadas_item">
+            <!-- Parte Superior de la Portada -->
+            <div class="portadas_item_estado">
+                    
+                <span class="estado">
+                    DESTACADO
+                </span>
+            
+                <div class="seccion">
+                    <span>
+                        Emprendimiento
+                    </span>
+                </div>
+            </div>
+
+            <div class="container-portadas">
+                
+                <!-- Titulo de la Portada -->
+                <div class="portadas_item_medio">
+                    <div class="imagen-portada">
+                    </div>
+                    <div class="titulo">
+                        <span>
+                            Empretorianes
+                        </span>
+                    </div>
+                </div>
+    
+                <!-- Informacion -->
+    
+                <div class="portadas_item_informacion">
+                    <div class="nivel">
+                        <div class="icono_nivel"></div>
+                        <div class="texto">Nivel</div>
+                        <div class="texto">Medio</div>
+                    </div>
+                    <div class="conferencia">
+                        <div class="icono_conferencias"></div>
+                        <div class="texto">Conferencias</div>
+                        <div class="texto">22 </div>
+                    </div>
+                    <div class="duracion">
+                        <div class="icono_horas"></div>
+                        <div class="texto">Horas</div>
+                        <div class="texto">15</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="portadas_item">
+
+            <!-- Parte Superior de la Portada -->
+            <div class="portadas_item_estado">
+                <div class="estado">DESTACADO</div>
+                <div class="seccion">Emprendimiento</div>
+            </div>
+
+            <!-- Titulo de la Portada -->
+            <div class="portadas_item_medio">
+                <div class="imagen-portada"></div>
+                <div class="titulo">Empretorianes</div>
+            </div>
+
+            <!-- Informacion -->
+
+            <div class="portadas_item_informacion">
+                <div class="nivel">
+                    <div class="icono"></div>
+                    <div class="texto">Medio</div>
+                </div>
+                <div class="conferencias">
+                    <div class="icono"></div>
+                    <div class="texto">22 Conferencias</div>
+                </div>
+                <div class="duracion">
+                    <div class="icono"></div>
+                    <div class="texto">15 Horas</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="portadas_item">
+
+            <!-- Parte Superior de la Portada -->
+            <div class="portadas_item_estado">
+                <div class="estado">DESTACADO</div>
+                <div class="seccion">Emprendimiento</div>
+            </div>
+
+            <!-- Titulo de la Portada -->
+            <div class="portadas_item_medio">
+                <div class="imagen-portada"></div>
+                <div class="titulo">Empretorianes</div>
+            </div>
+
+            <!-- Informacion -->
+
+            <div class="portadas_item_informacion">
+                <div class="nivel">
+                    <div class="icono"></div>
+                    <div class="texto">Intermedio</div>
+                </div>
+                <div class="conferencias">
+                    <div class="icono"></div>
+                    <div class="texto">22 Conferencias</div>
+                </div>
+                <div class="duracion">
+                    <div class="icono"></div>
+                    <div class="texto">15 Horas</div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    
+    
+    <script>
+
+    </script>
+</body>
+</html>

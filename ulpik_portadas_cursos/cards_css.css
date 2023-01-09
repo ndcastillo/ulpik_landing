@@ -1,0 +1,22 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 64.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #EDF2F7;
+}
+
+container{
+    width: 100%;
+    height: auto;
+}
+
+
